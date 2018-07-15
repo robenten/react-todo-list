@@ -68,11 +68,11 @@ class App extends Component {
 						Todo List
 					</h2>
 					<TodoForm addTodo={this.addTodo}/>
-                    <TodoLists 
-                      todos={this.state.data} 
-                      clickTodo={this.handleClickTodo}
-                    />
 					{`${this.state.data.filter(todo => todo.done === false).length} remaining out of ${this.state.data.length} tasks`}
+					<TodoLists 
+						todos={this.state.data} 
+						clickTodo={this.handleClickTodo}
+					/>
 				</div>
 				<style>{`
 					.is-done {
